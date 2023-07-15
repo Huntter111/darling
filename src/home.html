@@ -1,12 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-	@@include('html/_head.htm',{
-	"title":"Головна сторінка"
-	})
+	@@include('html/_head.htm',{ "title":"Головна сторінка" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__main main-page">
+					<!-- Оболонка слайдера -->
+					<div class="main-page__slider swiper">
+						<!-- Частина слайдера, що рухається -->
+						<div class="main-page__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="main-page__slide swiper-slide swiper-slide-main main-page__slide--first">
+								<div class="swiper-slide-main__container">
+									<div class="swiper-slide-main__desc">
+										<h1 class="title swiper-slide-main__title">Бестселер продажів</h1>
+										<p class="swiper-slide-main__text">Забезпечте комфорт своїм улюбленцям з нашими лежаками</p>
+										<a href="#" class="swiper-slide-main__button"
+											><span class="button-arrow"></span><span class="button">До товарів</span></a
+										>
+									</div>
+								</div>
+							</div>
+							<!-- Слайд 2-->
+							<div class="main-page__slide swiper-slide swiper-slide-main main-page__slide--second">
+								<div class="swiper-slide-main__container">
+									<div class="swiper-slide-main__desc">
+										<h1 class="title swiper-slide-main__title">Бестселер продажів</h1>
+										<p class="swiper-slide-main__text">Забезпечте комфорт своїм улюбленцям з нашими лежаками</p>
+										<a href="#" class="swiper-slide-main__button"
+											><span class="button-arrow"></span><span class="button">До товарів</span></a
+										>
+									</div>
+								</div>
+							</div>
+							<!-- Слайд 3-->
+							<div class="main-page__slide swiper-slide swiper-slide-main main-page__slide--third">
+								<div class="swiper-slide-main__container">
+									<div class="swiper-slide-main__desc">
+										<h1 class="title swiper-slide-main__title">Бестселер продажів</h1>
+										<p class="swiper-slide-main__text">Забезпечте комфорт своїм улюбленцям з нашими лежаками</p>
+										<a href="#" class="swiper-slide-main__button"
+											><span class="button-arrow"></span><span class="button">До товарів</span></a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Якщо потрібна пагінація -->
+						<div class="main-page__pagination swiper-pagination"></div>
+						<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+						<!-- <button type="button" class="swiper-button-prev"></button> -->
+						<!-- <button type="button" class="swiper-button-next"></button> -->
+						<!-- Якщо потрібен скролбар -->
+						<!-- <div class="swiper-scrollbar"></div> -->
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

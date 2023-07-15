@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import {Navigation, Pagination, Autoplay, EffectFade} from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -18,9 +18,9 @@ EffectFade, Lazy, Manipulation
 
 // Стилі Swiper
 // Базові стилі
-import "../../scss/base/swiper.scss";
+import '../../scss/base/swiper.scss';
 // Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import '../../scss/libs/swiper.scss';
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
@@ -28,41 +28,39 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.main-page__slider')) {
+		// Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.main-page__slider', {
+			// Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Pagination, Autoplay, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			autoHeight: true,
-			speed: 800,
-
+			speed: 1000,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Ефекти
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
 
 			// Пагінація
-			/*
+
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
-			*/
 
 			// Скроллбар
 			/*
@@ -100,9 +98,7 @@ function initSliders() {
 			},
 			*/
 			// Події
-			on: {
-
-			}
+			on: {},
 		});
 	}
 }
@@ -124,7 +120,7 @@ function initSlidersScroll() {
 				scrollbar: {
 					el: sliderScrollBar,
 					draggable: true,
-					snapOnRelease: false
+					snapOnRelease: false,
 				},
 				mousewheel: {
 					releaseOnEdges: true,
@@ -135,7 +131,7 @@ function initSlidersScroll() {
 	}
 }
 
-window.addEventListener("load", function (e) {
+window.addEventListener('load', function (e) {
 	// Запуск ініціалізації слайдерів
 	initSliders();
 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)

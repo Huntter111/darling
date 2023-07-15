@@ -3,12 +3,50 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: rem(22) rem(50);
+	align-items: center;
+	background: #6e9c9f;
+	color: #fff;
+	text-align: center;
+	font-size: rem(17);
+	font-weight: 400;
+	line-height: 1.389; /* 23.613px */
+	letter-spacing: rem(0.34);
+	transition: all 0.3s;
+	white-space: nowrap;
+	@media (max-width: $mobile) {
+		padding: rem(16) rem(34);
+		font-size: rem(15);
+	}
 	@media (any-hover: hover) {
 		&:hover {
+			background: #509498;
 		}
 	}
 	&._fw {
 		width: 100%;
+	}
+}
+.button-arrow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(110, 156, 159, 0.5) url('@img/icons/arrow.svg') center no-repeat;
+	flex: 0 0 rem(67);
+	width: rem(67);
+	height: rem(67);
+	border-top: rem(1) solid #509498;
+	border-left: rem(1) solid #509498;
+	border-bottom: rem(1) solid #509498;
+	transition: all 0.3s;
+	@media (max-width: $mobile) {
+		flex: 0 0 rem(53);
+		width: rem(53);
+		height: rem(53);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: #509498 url('@img/icons/arrow.svg') center no-repeat;
+		}
 	}
 }

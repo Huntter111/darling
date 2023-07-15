@@ -1,10 +1,27 @@
 //====================================================================================================
 .header {
-	padding-top: rem(15);
-	padding-bottom: rem(15);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: #fff;
+	padding-top: rem(10);
+	padding-bottom: rem(10);
+	// border-bottom: 1px solid #000;
 	@media (min-width: $mobile) {
-		padding-top: rem(25);
-		padding-bottom: rem(25);
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+	}
+	&._header-scroll {
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+		box-shadow: 0px rem(4) rem(15) 0px rgba(0, 0, 0, 0.05);
+		transition:
+			box-shadow 0.3s ease 0s,
+			padding-bottom 0.3s ease 0s,
+			padding-top 0.3s ease 0s;
 	}
 	&__container {
 		display: flex;
@@ -59,7 +76,7 @@
 				transition: right 0.3s cubic-bezier(0, 0, 0.2, 1) 0s;
 				background-color: #fff;
 				// border-bottom: rem(1) solid #089706;
-				min-height: rem(68);
+				min-height: rem(58);
 			}
 			.menu-open & {
 				right: 0;
@@ -115,6 +132,12 @@
 		font-weight: 400;
 		line-height: 1.4;
 		letter-spacing: 0.3px;
+
+		img {
+			width: rem(20);
+			height: rem(20);
+			animation: phoneVibration 1s infinite;
+		}
 		@media (max-width: $mobile) {
 			img {
 				width: rem(30);
@@ -136,7 +159,35 @@
 	&__icon {
 	}
 }
-
+@keyframes phoneVibration {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-3deg);
+	}
+	20% {
+		transform: rotate(3deg);
+	}
+	30% {
+		transform: rotate(-2deg);
+	}
+	40% {
+		transform: rotate(2deg);
+	}
+	50% {
+		transform: rotate(-1deg);
+	}
+	60% {
+		transform: rotate(1deg);
+	}
+	70% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
 //====================================================================================================
 
 //Burger
