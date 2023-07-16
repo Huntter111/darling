@@ -10,7 +10,6 @@
 	}
 	@include adaptiveValue('margin-bottom', 65, 25);
 	&__slider {
-		min-width: 0;
 	}
 	&__wrapper {
 	}
@@ -135,9 +134,6 @@
 		}
 	}
 	&__card {
-		display: flex;
-		flex-direction: column;
-		row-gap: rem(30);
 	}
 }
 
@@ -146,16 +142,28 @@
 	// transition: all 0.3s;
 	@media (any-hover: hover) {
 		&:hover {
-			a:nth-child(1) {
+			.card-collection__image-ibg {
 				&::before {
 					transition: all 0.3s;
 					opacity: 1;
 				}
 			}
+			.card-collection__title {
+				transition: all 0.1s;
+				color: #6e9c9f;
+			}
 		}
 	}
-	a:nth-child(1) {
-		// transition: all 0.3s;
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(30);
+	}
+	&__image-ibg {
+		display: block;
+		padding-bottom: 100%;
+		// padding-right: 100%;
 		&::before {
 			transition: all 0.3s;
 			content: '';
@@ -169,11 +177,6 @@
 			transform: rotate(-90deg);
 			opacity: 0;
 		}
-	}
-	&__image-ibg {
-		display: block;
-		padding-bottom: 100%;
-		// padding-right: 100%;
 	}
 
 	&__title {
@@ -235,7 +238,6 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
-
 	&__card {
 	}
 }
@@ -270,5 +272,53 @@
 	&__text {
 		@include adaptiveValue('font-size', 17, 15, 0, 1110, 767);
 		letter-spacing: 0.34px;
+	}
+}
+//========================================================================================================================================================
+// !IMPORTANT
+.materials {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('row-gap', 72, 50);
+	}
+	&__wrapper-slider {
+		min-width: 0;
+		position: relative;
+	}
+	&__title {
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	&__image-ibg {
+		padding-bottom: 100%;
+		// max-width: 100%;
+	}
+
+	&__pagination {
+		display: flex;
+		// position: relative;
+		// position: relative;
+		left: calc(50% - 30px) !important;
+		bottom: -20px !important;
+		& .swiper-pagination-bullet {
+			width: rem(30);
+			height: rem(4);
+			background: #d1d1d1;
+			border-radius: 0;
+			margin: 0 !important;
+			// column-gap: rem(10) !important ;
+		}
+		& .swiper-pagination-bullet-active {
+			background: #000;
+		}
 	}
 }

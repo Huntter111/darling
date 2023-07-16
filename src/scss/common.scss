@@ -14,6 +14,9 @@
 .pblock {
 	@include adaptiveValue('padding-top', 65, 35);
 	@include adaptiveValue('margin-bottom', 65, 35);
+	&:last-child {
+		@include adaptiveValue('margin-bottom', 130, 80);
+	}
 }
 .title {
 	@include adaptiveValue('font-size', 55, 30);

@@ -16,7 +16,7 @@
 									<div class="swiper-slide-main__desc">
 										<h1 class="title swiper-slide-main__title">Бестселер продажів</h1>
 										<p class="swiper-slide-main__text">Забезпечте комфорт своїм улюбленцям з нашими лежаками</p>
-										<a href="#" class="swiper-slide-main__button"
+										<a href="#" data-goto-header data-goto=".collection" class="swiper-slide-main__button"
 											><span class="button-arrow"></span><span class="button">До товарів</span></a
 										>
 									</div>
@@ -28,7 +28,7 @@
 									<div class="swiper-slide-main__desc">
 										<h1 class="title swiper-slide-main__title">Бестселер продажів</h1>
 										<p class="swiper-slide-main__text">Забезпечте комфорт своїм улюбленцям з нашими лежаками</p>
-										<a href="#" class="swiper-slide-main__button"
+										<a href="#" data-goto-header data-goto=".collection" class="swiper-slide-main__button"
 											><span class="button-arrow"></span><span class="button">До товарів</span></a
 										>
 									</div>
@@ -40,7 +40,7 @@
 									<div class="swiper-slide-main__desc">
 										<h1 class="title swiper-slide-main__title">Бестселер продажів</h1>
 										<p class="swiper-slide-main__text">Забезпечте комфорт своїм улюбленцям з нашими лежаками</p>
-										<a href="#" class="swiper-slide-main__button"
+										<a href="#" data-goto-header data-goto=".collection" class="swiper-slide-main__button"
 											><span class="button-arrow"></span><span class="button">До товарів</span></a
 										>
 									</div>
@@ -49,11 +49,6 @@
 						</div>
 						<!-- Якщо потрібна пагінація -->
 						<div class="main-page__pagination swiper-pagination"></div>
-						<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
-						<!-- <button type="button" class="swiper-button-prev"></button> -->
-						<!-- <button type="button" class="swiper-button-next"></button> -->
-						<!-- Якщо потрібен скролбар -->
-						<!-- <div class="swiper-scrollbar"></div> -->
 					</div>
 				</section>
 				<section class="collection pblock">
@@ -61,50 +56,58 @@
 						<h2 class="collection__title sub-title">Нова колекція</h2>
 						<div class="collection__cards">
 							<article class="collection__card card-collection">
-								<a href="#" class="card-collection__image-ibg">
-									<img src="@img/new-collection/01.png" alt="" />
-								</a>
-								<a href="#" class="card-collection__body">
-									<h3 class="card-collection__title">Назва товару</h3>
-									<div class="card-collection__prices">
-										<span class="card-collection__old-price">$229</span>
-										<span class="card-collection__value">$129</span>
+								<a href="" class="card-collection__link">
+									<div class="card-collection__image-ibg">
+										<img src="@img/new-collection/01.png" alt="" />
+									</div>
+									<div class="card-collection__body">
+										<h3 class="card-collection__title">Назва товару</h3>
+										<div class="card-collection__prices">
+											<span class="card-collection__old-price">$229</span>
+											<span class="card-collection__value">$129</span>
+										</div>
 									</div>
 								</a>
 							</article>
 							<article class="collection__card card-collection">
-								<a href="#" class="card-collection__image-ibg">
-									<img src="@img/new-collection/02.png" alt="" />
-								</a>
-								<a href="#" class="card-collection__body">
-									<h3 class="card-collection__title">Назва товару</h3>
-									<div class="card-collection__prices">
-										<span class="card-collection__old-price">$300</span>
-										<span class="card-collection__value">$150</span>
+								<a href="" class="card-collection__link">
+									<div class="card-collection__image-ibg">
+										<img src="@img/new-collection/02.png" alt="" />
+									</div>
+									<div class="card-collection__body">
+										<h3 class="card-collection__title">Назва товару</h3>
+										<div class="card-collection__prices">
+											<span class="card-collection__old-price">$399</span>
+											<span class="card-collection__value">$229</span>
+										</div>
 									</div>
 								</a>
 							</article>
 							<article class="collection__card card-collection">
-								<a href="#" class="card-collection__image-ibg">
-									<img src="@img/new-collection/03.png" alt="" />
-								</a>
-								<a href="#" class="card-collection__body">
-									<h3 class="card-collection__title">Назва товару</h3>
-									<div class="card-collection__prices">
-										<span class="card-collection__old-price">$400</span>
-										<span class="card-collection__value">$200</span>
+								<a href="" class="card-collection__link">
+									<div class="card-collection__image-ibg">
+										<img src="@img/new-collection/03.png" alt="" />
+									</div>
+									<div class="card-collection__body">
+										<h3 class="card-collection__title">Назва товару</h3>
+										<div class="card-collection__prices">
+											<span class="card-collection__old-price">$499</span>
+											<span class="card-collection__value">$329</span>
+										</div>
 									</div>
 								</a>
 							</article>
 							<article class="collection__card card-collection">
-								<a href="#" class="card-collection__image-ibg">
-									<img src="@img/new-collection/03.png" alt="" />
-								</a>
-								<a href="#" class="card-collection__body">
-									<h3 class="card-collection__title">Назва товару</h3>
-									<div class="card-collection__prices">
-										<span class="card-collection__old-price">$500</span>
-										<span class="card-collection__value">$300</span>
+								<a href="" class="card-collection__link">
+									<div class="card-collection__image-ibg">
+										<img src="@img/new-collection/03.png" alt="" />
+									</div>
+									<div class="card-collection__body">
+										<h3 class="card-collection__title">Назва товару</h3>
+										<div class="card-collection__prices">
+											<span class="card-collection__old-price">$699</span>
+											<span class="card-collection__value">$429</span>
+										</div>
 									</div>
 								</a>
 							</article>
@@ -155,6 +158,42 @@
 									</p>
 								</div>
 							</article>
+						</div>
+					</div>
+				</section>
+				<section class="materials pblock">
+					<div class="materials__container">
+						<h2 class="materials__title sub-title">Матеріали</h2>
+						<!-- Оболонка слайдера -->
+						<div class="materials__wrapper-slider">
+							<div class="materials__slider swiper">
+								<!-- Частина слайдера, що рухається -->
+								<div class="materials__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="materials__slide swiper-slide">
+										<div class="materials__image-ibg">
+											<img src="@img/materials/01.jpg" alt="Махра Монтажная" />
+										</div>
+									</div>
+									<!-- Слайд 2-->
+									<div class="materials__slide swiper-slide">
+										<div class="materials__image-ibg">
+											<img src="@img/materials/02.jpg" alt="Махра Монтажная" />
+										</div>
+									</div>
+									<!-- Слайд 3-->
+									<div class="materials__slide swiper-slide">
+										<div class="materials__image-ibg">
+											<img src="@img/materials/03.jpg" alt="Махра Монтажная" />
+										</div>
+									</div>
+								</div>
+								<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+								<!-- <button type="button" class="swiper-button-prev"></button> -->
+								<!-- <button type="button" class="swiper-button-next"></button> -->
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="materials__pagination swiper-pagination"></div>
 						</div>
 					</div>
 				</section>
