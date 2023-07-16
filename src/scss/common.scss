@@ -15,7 +15,7 @@
 	@include adaptiveValue('padding-top', 65, 35);
 	@include adaptiveValue('margin-bottom', 65, 35);
 	&:last-child {
-		@include adaptiveValue('margin-bottom', 130, 80);
+		@include adaptiveValue('margin-bottom', 130, 100);
 	}
 }
 .title {
@@ -50,5 +50,22 @@
 		line-height: 1.4;
 		letter-spacing: 0.3px;
 		color: #6e9c9f;
+	}
+}
+.swiper-buttons-wrapper {
+	& > button {
+		// position: relative;
+		&::after {
+			color: rgb(255, 255, 255);
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(16);
+			background-color: #509498;
+			width: rem(40);
+			height: rem(40);
+			border-radius: 50%;
+			flex: 0 0 rem(40);
+		}
 	}
 }

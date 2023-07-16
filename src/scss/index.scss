@@ -139,7 +139,6 @@
 
 .card-collection {
 	position: relative;
-	// transition: all 0.3s;
 	@media (any-hover: hover) {
 		&:hover {
 			.card-collection__image-ibg {
@@ -275,7 +274,7 @@
 	}
 }
 //========================================================================================================================================================
-// !IMPORTANT
+// !MATERIALS
 .materials {
 	&__container {
 		display: flex;
@@ -288,37 +287,36 @@
 	}
 	&__title {
 	}
-
 	&__slider {
 	}
-
 	&__wrapper {
 	}
-
 	&__slide {
 	}
-
 	&__image-ibg {
 		padding-bottom: 100%;
-		// max-width: 100%;
 	}
-
 	&__pagination {
 		display: flex;
-		// position: relative;
-		// position: relative;
-		left: calc(50% - 30px) !important;
-		bottom: -20px !important;
+		left: calc(50% - rem(30)) !important;
+		bottom: rem(-30) !important;
 		& .swiper-pagination-bullet {
 			width: rem(30);
 			height: rem(4);
 			background: #d1d1d1;
 			border-radius: 0;
 			margin: 0 !important;
-			// column-gap: rem(10) !important ;
 		}
 		& .swiper-pagination-bullet-active {
-			background: #000;
+			background: #509498;
 		}
+	}
+	&__buttons {
+	}
+	&__button-prev {
+		left: -0.95% !important;
+	}
+	&__button-next {
+		right: -0.95% !important;
 	}
 }

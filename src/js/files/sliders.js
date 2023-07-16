@@ -35,7 +35,7 @@ function initSliders() {
 			// Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation, Pagination, Autoplay, EffectFade],
+			modules: [Pagination, Autoplay, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -100,7 +100,7 @@ function initSliders() {
 			on: {},
 		});
 	}
-	if (document.querySelector('.materials__slider')) {
+	if (document.querySelector('.materials__wrapper-slider')) {
 		// Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.materials__slider', {
@@ -110,15 +110,15 @@ function initSliders() {
 			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
-			// slidesPerView: 0,
+			slidesPerView: 0,
 			spaceBetween: 0,
 			autoHeight: true,
-			speed: 1000,
-			//touchRatio: 0,
+			speed: 500,
+			// touchRatio: 0,
 			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
-			// lazy: true,
+			lazy: true,
 
 			// Ефекти
 			// effect: 'fade',
@@ -131,7 +131,6 @@ function initSliders() {
 				el: '.materials__pagination',
 				clickable: true,
 			},
-
 			// Скроллбар
 			/*
 			scrollbar: {
@@ -139,29 +138,19 @@ function initSliders() {
 				draggable: true,
 			},
 			*/
-			/*
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.materials__button-prev',
+				nextEl: '.materials__button-next',
 			},
-			*/
 
 			// Брейкпоінти
 			breakpoints: {
-				280: {
+				320: {
 					slidesPerView: 1,
 					spaceBetween: 30,
 				},
-				479: {
-					slidesPerView: 1.2,
-					spaceBetween: 30,
-				},
 				600: {
-					slidesPerView: 1.8,
-					spaceBetween: 30,
-				},
-				768: {
 					slidesPerView: 2,
 					spaceBetween: 30,
 				},
