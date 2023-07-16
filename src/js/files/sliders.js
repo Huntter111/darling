@@ -46,19 +46,17 @@ function initSliders() {
 			//simulateTouch: false,
 			loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			// lazy: true,
 
 			// Ефекти
 			effect: 'fade',
 			autoplay: {
-				delay: 3000,
+				delay: 2500,
 				disableOnInteraction: false,
 			},
-
 			// Пагінація
-
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.main-page__pagination',
 				clickable: true,
 			},
 
@@ -69,12 +67,13 @@ function initSliders() {
 				draggable: true,
 			},
 			*/
-
+			/*
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
+			*/
 			/*
 			// Брейкпоінти
 			breakpoints: {

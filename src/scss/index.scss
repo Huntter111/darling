@@ -8,6 +8,7 @@
 	@media (min-width: $mobile) {
 		padding-top: rem(84);
 	}
+	@include adaptiveValue('margin-bottom', 65, 25);
 	&__slider {
 		min-width: 0;
 	}
@@ -124,6 +125,7 @@
 	&__cards {
 		display: grid;
 		column-gap: rem(30);
+		row-gap: rem(30);
 		// grid-template-columns: repeat(4, 1fr);
 		@media (min-width: $mobileSmall) {
 			grid-template-columns: repeat(2, 1fr);
@@ -138,8 +140,7 @@
 		row-gap: rem(30);
 	}
 }
-.sub-title {
-}
+
 .card-collection {
 	position: relative;
 	// transition: all 0.3s;
@@ -186,12 +187,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		flex-wrap: wrap;
 		row-gap: rem(7);
 	}
 	&__prices {
 		display: flex;
 		column-gap: rem(10);
-
 		// font-size: rem(17);
 		font-style: normal;
 		font-weight: 500;
@@ -206,5 +207,68 @@
 
 	&__value {
 		color: #998e78;
+	}
+}
+//========================================================================================================================================================
+// !IMPORTANT
+.important {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('row-gap', 72, 50);
+	}
+
+	&__title {
+	}
+
+	&__cards {
+		display: grid;
+		row-gap: rem(40);
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(1fr);
+		}
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: rem(30);
+		}
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__card {
+	}
+}
+
+.card-important {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue('row-gap', 37, 20, 0, 1110, 767);
+	&__icon {
+		svg {
+			width: rem(60);
+			height: rem(60);
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('row-gap', 24, 12, 1110, 767);
+		font-weight: 500;
+		line-height: 1.4; /* 35px */
+		@media (min-width: $mobileSmall) {
+			max-width: rem(305);
+		}
+	}
+
+	&__title {
+		@include adaptiveValue('font-size', 25, 22, 0, 1110, 767);
+		letter-spacing: 0.5px;
+	}
+
+	&__text {
+		@include adaptiveValue('font-size', 17, 15, 0, 1110, 767);
+		letter-spacing: 0.34px;
 	}
 }

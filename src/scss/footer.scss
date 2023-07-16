@@ -29,6 +29,12 @@
 		@media (max-width: $mobile) {
 			text-align: center;
 		}
+		@media (max-width: $mobile) {
+			img {
+				width: rem(80);
+				height: rem(72);
+			}
+		}
 	}
 
 	&__text {

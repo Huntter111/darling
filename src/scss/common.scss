@@ -12,11 +12,8 @@
 	}
 }
 .pblock {
-	@include adaptiveValue('padding-top', 130, 50);
-	&:not(:last-child) {
-		@include adaptiveValue('margin-bottom', 130, 80);
-	}
-	margin-bottom: rem(50);
+	@include adaptiveValue('padding-top', 65, 35);
+	@include adaptiveValue('margin-bottom', 65, 35);
 }
 .title {
 	@include adaptiveValue('font-size', 55, 30);
@@ -25,7 +22,7 @@
 	letter-spacing: 1.1px;
 }
 .sub-title {
-	@include adaptiveValue('font-size', 40, 26);
+	@include adaptiveValue('font-size', 40, 28);
 	font-weight: 500;
 	line-height: 1.1; /* 44px */
 	letter-spacing: rem(0.8);

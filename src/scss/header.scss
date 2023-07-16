@@ -9,7 +9,7 @@
 	background-color: #fff;
 	padding-top: rem(10);
 	padding-bottom: rem(10);
-	// border-bottom: 1px solid #000;
+	// border: 1px solid #000;
 	@media (min-width: $mobile) {
 		padding-top: rem(20);
 		padding-bottom: rem(20);
@@ -19,7 +19,7 @@
 		padding-bottom: rem(10);
 		box-shadow: 0px rem(4) rem(15) 0px rgba(0, 0, 0, 0.05);
 		transition:
-			box-shadow 0.3s ease 0s,
+			// box-shadow 0.3s ease 0s,
 			padding-bottom 0.3s ease 0s,
 			padding-top 0.3s ease 0s;
 	}
