@@ -1,3 +1,147 @@
 //====================================================================================================
+.footer {
+	@include adaptiveValue('padding-top', 88, 50);
+	@include adaptiveValue('padding-bottom', 111, 80);
+	background: #f1eadc;
+
+	&__container {
+	}
+
+	&__columns {
+		display: grid;
+		@media (min-width: $mobile) {
+			grid-template-columns: minmax(rem(171), rem(180)) minmax(rem(320), rem(500)) minmax(rem(144), rem(200));
+		}
+		@include adaptiveValue('column-gap', 111, 30, 0, 1110, 991);
+		@media (max-width: $mobile) {
+			row-gap: rem(40);
+		}
+	}
+
+	&__column {
+	}
+}
+.footer-logo {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue('row-gap', 54, 34, 0, 1110, 767);
+	&__logo {
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(6);
+
+		@media (min-width: $mobile) {
+			font-size: rem(13);
+		}
+		font-weight: 400;
+		line-height: 1.4; /* 18.2px */
+		letter-spacing: 0.26px;
+		a {
+			white-space: nowrap;
+		}
+		@media (min-width: $mobile) {
+			a {
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.footer-menu {
+	flex-grow: 1;
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue('column-gap', 45, 20, 0, 1110, 767);
+		row-gap: rem(10);
+	}
+	&__item {
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+		}
+	}
+	&__link {
+		// font-size: rem(17);
+		font-weight: 400;
+		line-height: 1.4; /* 21px */
+		letter-spacing: 0.3px;
+		@media (any-hover: hover) {
+			transition: all 0.1s;
+			&:hover {
+				color: #6e9c9f;
+			}
+		}
+		@media (min-width: $mobile) {
+			font-size: rem(15);
+		}
+	}
+}
+.footer-social {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	row-gap: rem(9);
+	@media (min-width: $mobile) {
+		font-size: rem(15);
+	}
+	font-weight: 400;
+	line-height: 1.4; /* 21px */
+	letter-spacing: 0.3px;
+	&__phone {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__email {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(22);
+		}
+	}
+
+	&__media {
+		display: flex;
+		column-gap: rem(12);
+		@media (max-width: $mobile) {
+			column-gap: rem(20);
+		}
+		a {
+			svg {
+				width: rem(23);
+				height: rem(23);
+				transition: all 0.3s;
+				@media (any-hover: hover) {
+					&:hover {
+						fill: #509498;
+					}
+				}
+				@media (max-width: $mobile) {
+					width: rem(35);
+					height: rem(35);
+				}
+			}
+		}
+	}
+}
 
 //====================================================================================================

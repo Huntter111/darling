@@ -45,35 +45,7 @@
 			z-index: 1;
 		}
 	}
-	// &__image-wrapper {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: rem(600);
-	// }
-	&__bg--first {
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-		// &::before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	top: 0;
-		// 	left: 0;
-		// 	background: rgba(0, 0, 0, 0.4);
-		// 	z-index: 1;
-		// }
-	}
 	&__pagination {
-		// position: absolute;
 		@media (min-width: $mobile) {
 			bottom: rem(36) !important;
 		}
@@ -130,7 +102,6 @@
 		font-weight: 400;
 		line-height: 1.4;
 		letter-spacing: rem(0.4);
-		// text-align: right;
 	}
 
 	&__button {

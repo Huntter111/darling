@@ -1,4 +1,16 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.logo {
+	img {
+		width: rem(60);
+		height: rem(54);
+	}
+	@media (max-width: $mobile) {
+		img {
+			width: rem(43);
+			height: rem(38);
+		}
+	}
+}
 .title {
 	@include adaptiveValue('font-size', 55, 28);
 	font-weight: 500;
