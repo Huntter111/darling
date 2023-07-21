@@ -17,16 +17,28 @@
 	@media (max-width: $mobile) {
 		padding: rem(16) rem(34);
 		font-size: rem(15);
+		// font-size: rem(20);
+		.touch & {
+			font-size: rem(20);
+		}
+	}
+	@media (hover: none) {
+		background: #509498;
 	}
 	@media (any-hover: hover) {
 		&:hover {
 			background: #509498;
+			cursor: pointer;
 		}
 	}
 	&._fw {
 		width: 100%;
 	}
 }
+.button:active {
+	transform: scale(0.97);
+}
+
 .button-arrow {
 	display: inline-flex;
 	align-items: center;

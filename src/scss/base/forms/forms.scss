@@ -12,6 +12,9 @@
 	&__button {
 	}
 	&__error {
+		color: red;
+		padding-top: rem(5);
+		font-size: rem(15);
 	}
 }
 //</FORM>
@@ -22,7 +25,7 @@
 
 // <INPUTS>
 // Сніппет (HTML): inp
-// @import "input";
+@import 'input';
 
 // <CHECK>
 // Сніппет (HTML): chk
@@ -30,7 +33,7 @@
 
 // <RADIO>
 // Сніппет (HTML): opt
-// @import "radio";
+// @import 'radio';
 
 // <SELECT>
 // Сніппет (HTML): sel

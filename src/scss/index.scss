@@ -18,6 +18,9 @@
 
 	&__slide {
 		position: relative;
+		@media (min-width: em(1600)) {
+			min-height: 92vh;
+		}
 		&--first {
 			background: url('@img/main/bg-1.png') 0 0 / cover no-repeat;
 		}
@@ -127,6 +130,13 @@
 		row-gap: rem(30);
 		// grid-template-columns: repeat(4, 1fr);
 		@media (min-width: $mobileSmall) {
+			// grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			column-gap: rem(20);
+			row-gap: rem(20);
+		}
+		@media (min-width: em(350)) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (min-width: $tablet) {
@@ -139,6 +149,10 @@
 
 .card-collection {
 	position: relative;
+	background: transparent;
+	transition: all 0.3s;
+	background: rgb(255, 255, 255);
+	box-shadow: 0px rem(2) rem(5) rem(0) rgba(37, 37, 37, 0.25);
 	@media (any-hover: hover) {
 		&:hover {
 			.card-collection__image-ibg {
@@ -147,17 +161,24 @@
 					opacity: 1;
 				}
 			}
-			.card-collection__title {
-				transition: all 0.1s;
-				color: #6e9c9f;
-			}
+			// .card-collection__title {
+			// 	transition: all 0.1s;
+			// 	color: #6e9c9f;
+			// }
+			transform: scale(1.05);
+			background: rgb(255, 255, 255);
+			box-shadow: 0px rem(2) rem(10) 0px rgba(37, 37, 37, 0.25);
 		}
 	}
-
+	@media (hover: none) {
+		/* Ваши стили для устройств с touch-экраном здесь */
+		background: rgb(255, 255, 255);
+		box-shadow: 0px rem(2) rem(10) 0px rgba(37, 37, 37, 0.25);
+	}
 	&__link {
 		display: flex;
 		flex-direction: column;
-		row-gap: rem(30);
+		@include adaptiveValue('row-gap', 30, 15, 0, 479, 350);
 	}
 	&__image-ibg {
 		display: block;
@@ -184,6 +205,7 @@
 		font-weight: 500;
 		line-height: 1.4; /* 28px */
 		letter-spacing: 0.4px;
+		text-align: center;
 	}
 	&__body {
 		display: flex;
@@ -191,6 +213,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		row-gap: rem(7);
+		@include adaptiveValue('padding-bottom', 30, 15, 0, 479, 350);
 	}
 	&__prices {
 		display: flex;

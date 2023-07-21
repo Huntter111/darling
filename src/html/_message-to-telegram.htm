@@ -1,0 +1,61 @@
+<div id="message-good" aria-hidden="true" class="popup form-popup">
+	<div class="popup__wrapper form-popup__wrapper">
+		<div class="popup__content form-popup__content">
+			<button data-close type="button" class="popup__close form-popup__close close-popup-btn">
+				<img src="@img/icons/close.svg" alt="icon: close" />
+			</button>
+			<div class="popup__text form-popup__body">
+				<div class="form-popup__label">Оформлення замовлення</div>
+				<form action="files/sendtelegram.php" class="form-send" method="post">
+					<input type="hidden" name="typeProduct" value="1" />
+					<div class="form-send__row">
+						<div class="form-send__line line-form">
+							<input
+								data-validate
+								data-error="Введіть коректне Ім'я"
+								data-required="name"
+								type="text"
+								name="name"
+								required
+								class="form-send__input input"
+							/>
+							<label class="line-form__label-name">
+								<span class="line-form__content-name">Ім'я</span>
+							</label>
+						</div>
+						<div class="form-send__line line-form">
+							<input
+								data-validate
+								data-error="Введіть коректний телефон"
+								data-required="phone"
+								id="phoneInput"
+								class="form-send__input input"
+								type="tel"
+								name="phone"
+								required
+							/>
+							<label class="line-form__label-name">
+								<span class="line-form__content-name">Телефон</span>
+							</label>
+						</div>
+					</div>
+					<div class="form-send__product">
+						<div class="form-send__wrapper">
+							<div class="form-send__name">Обраний розмір:</div>
+							<div class="form-send__size"></div>
+						</div>
+						<div class="form-send__wrapper">
+							<div class="form-send__name">Обраний колір:</div>
+							<div class="form-send__color"></div>
+						</div>
+						<div class="form-send__wrapper">
+							<div class="form-send__name">Ціна:</div>
+							<div class="form-send__price"></div>
+						</div>
+					</div>
+					<button type="submit" class="button form-send__button">Надіслати</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
