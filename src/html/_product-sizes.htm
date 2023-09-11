@@ -1,15 +1,41 @@
 <div id="sizes" aria-hidden="true" class="popup sizes">
 	<div class="popup__wrapper sizes__wrapper">
 		<div class="popup__content sizes__content">
-			<button data-close type="button" class="popup__close close-popup-btn"><img src="@img/icons/close.svg" alt="Icon: close" /></button>
+			<button data-close type="button" class="popup__close close-popup-btn sizes-close-popup">
+				<img src="@img/icons/close.svg" alt="Icon: close" />
+			</button>
 			<div class="popup__text sizes__body">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora repellendus a veritatis ipsum delectus fugit sapiente,
-				temporibus eum illum molestias ducimus doloribus accusantium quae sunt illo non voluptatibus quis reprehenderit? Amet, soluta?
-				Dolore possimus eos et cupiditate consequuntur! Amet assumenda sed doloribus, quam eveniet dolorum. Vero fuga ab ipsa culpa
-				excepturi dolorum magnam eum, eveniet, laborum soluta distinctio? Nostrum reprehenderit et magni exercitationem consequuntur vel
-				non voluptatum sapiente quos sunt accusamus cum, molestias sint sit nemo perspiciatis velit consequatur nulla possimus?
-				Asperiores dolor eum deleniti inventore animi modi quod voluptatem. Omnis repudiandae repellat harum debitis assumenda deserunt
-				corporis ullam delectus!
+				<!-- Оболонка слайдера -->
+				<div class="sizes__slider swiper">
+					<!-- Частина слайдера, що рухається -->
+					<div class="sizes__wrapper swiper-wrapper">
+						<!-- Слайд 1-->
+						<div class="sizes__slide swiper-slide swiper-slide-size">
+							<div class="swiper-slide-size__image-ibg">
+								<img src="@img/product-one-sizes/S.png" alt="size S" />
+							</div>
+						</div>
+						<!-- Слайд 2-->
+						<div class="sizes__slide swiper-slide swiper-slide-size">
+							<div class="swiper-slide-size__image-ibg">
+								<img src="@img/product-one-sizes/M.png" alt="size M" />
+							</div>
+						</div>
+						<!-- Слайд 3-->
+						<div class="sizes__slide swiper-slide swiper-slide-size">
+							<div class="swiper-slide-size__image-ibg">
+								<img src="@img/product-one-sizes/L.png" alt="size L" />
+							</div>
+						</div>
+					</div>
+					<!-- Якщо потрібна пагінація -->
+					<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+				</div>
+				<div class="sizes__buttons swiper-buttons-wrapper">
+					<button type="button" class="sizes-swiper-button-prev swiper-button-prev"></button>
+					<button type="button" class="sizes-swiper-button-next swiper-button-next"></button>
+				</div>
+				<div class="swiper-pagination sizes__pagination"></div>
 			</div>
 		</div>
 	</div>

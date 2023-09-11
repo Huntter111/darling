@@ -17,40 +17,40 @@
 										<div data-gallery class="image-product__wrapper swiper-wrapper">
 											<!-- Слайд -->
 											<a
-												href="@img/product-one/full-slider/full/01.jpg"
+												href="@img/product-one/main-slider/full/01.jpg"
 												class="image-product__slide swiper-slide swiper-slide--gray"
 											>
-												<img src="@img/product-one/full-slider/preview/01.jpg" alt="Пончик Сірий" />
+												<img src="@img/product-one/main-slider/preview/01.jpg" alt="Пончик Сірий" />
 											</a>
 											<a
-												href="@img/product-one/full-slider/full/02.jpg"
+												href="@img/product-one/main-slider/full/02.jpg"
 												class="image-product__slide swiper-slide swiper-slide--rufous"
 											>
-												<img src="@img/product-one/full-slider/preview/02.jpg" alt="Пончик Рижий" />
+												<img src="@img/product-one/main-slider/preview/02.jpg" alt="Пончик Рижий" />
 											</a>
 											<a
-												href="@img/product-one/full-slider/full/03.jpg"
+												href="@img/product-one/main-slider/full/03.jpg"
 												class="image-product__slide swiper-slide swiper-slide--vanila"
 											>
-												<img src="@img/product-one/full-slider/preview/03.jpg" alt="Пончик Ваніль" />
+												<img src="@img/product-one/main-slider/preview/03.jpg" alt="Пончик Ваніль" />
 											</a>
 											<a
-												href="@img/product-one/full-slider/full/04.jpg"
+												href="@img/product-one/main-slider/full/04.jpg"
 												class="image-product__slide swiper-slide swiper-slide--beige"
 											>
-												<img src="@img/product-one/full-slider/preview/04.jpg" alt="Пончик бежевий" />
+												<img src="@img/product-one/main-slider/preview/04.jpg" alt="Пончик бежевий" />
 											</a>
 											<a
-												href="@img/product-one/full-slider/full/05.jpg"
+												href="@img/product-one/main-slider/full/05.jpg"
 												class="image-product__slide swiper-slide swiper-slide--mocha"
 											>
-												<img src="@img/product-one/full-slider/preview/05.jpg" alt="Пончик Мокко" />
+												<img src="@img/product-one/main-slider/preview/05.jpg" alt="Пончик Мокко" />
 											</a>
 											<a
-												href="@img/product-one/full-slider/full/06.jpg"
+												href="@img/product-one/main-slider/full/06.jpg"
 												class="image-product__slide swiper-slide swiper-slide--pink"
 											>
-												<img src="@img/product-one/full-slider/preview/06.jpg" alt="Пончик рожевий" />
+												<img src="@img/product-one/main-slider/preview/06.jpg" alt="Пончик рожевий" />
 											</a>
 										</div>
 										<div class="image-product__buttons swiper-buttons-wrapper">
@@ -118,7 +118,7 @@
 												<label for="a-1" class="color-product__label color-product__label--gray"></label>
 											</div>
 											<div class="color-product__option">
-												<input id="a-2" type="radio" name="color" class="color-product__input" value="Красновато-коричневи" />
+												<input id="a-2" type="radio" name="color" class="color-product__input" value="Красновато-коричневий" />
 												<label for="a-2" class="color-product__label color-product__label--rufous"></label>
 											</div>
 											<div class="color-product__option">
@@ -149,10 +149,13 @@
 							<h2 class="description-product__title sub-title">Опис товару</h2>
 						</div>
 					</div>
+					<a data-popup="#message" href="#"></a>
+					<a data-popup="#message-error" href="#"></a>
 				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_js.htm',{}) @@include('html/_product-sizes.htm',{}) @@include('html/_message-to-telegram.htm',{})
+		@@include('html/_message.htm',{}) @@include('html/_message-error.htm',{})
 	</body>
 </html>

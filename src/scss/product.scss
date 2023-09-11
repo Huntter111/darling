@@ -146,7 +146,7 @@
 .size-product {
 	display: flex;
 	flex-direction: column;
-	row-gap: rem(10);
+	row-gap: rem(20);
 	&__title {
 		&:not(:last-child) {
 			@include adaptiveValue('margin-bottom', 24, 9);

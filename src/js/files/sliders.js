@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import {Navigation, Pagination, Autoplay, EffectFade, Thumbs, Controller} from 'swiper/modules';
+import {Navigation, Pagination, Autoplay, EffectFade, EffectCoverflow, Thumbs, Controller} from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -179,12 +179,14 @@ function initSliders() {
 			spaceBetween: 30,
 			autoHeight: true,
 			speed: 500,
+
 			// touchRatio: 0,
 			//simulateTouch: false,
 			//preloadImages: false,
 			slideToClickedSlide: true,
 			// lazy: true,
 			// loop: true,
+
 			freeMode: true,
 			watchSlidesProgress: true,
 			// Ефекти
@@ -233,7 +235,7 @@ function initSliders() {
 			// Події
 			on: {},
 		});
-		// Full slider
+		//! Full slider
 		let swiper = new Swiper('.image-product__slider', {
 			// Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
@@ -292,6 +294,83 @@ function initSliders() {
 				991: {
 					slidesPerView: 3,
 					spaceBetween: 30,
+				},
+			},
+			*/
+			// Події
+			on: {},
+		});
+		//! SWIPER SIZES
+		new Swiper('.sizes__slider', {
+			// Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Pagination, Navigation, Autoplay, EffectCoverflow],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 3,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 500,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			// lazy: true,
+
+			initialSlide: 1,
+			// Ефекти
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 1.25,
+			coverflowEffect: {
+				rotate: 50,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: true,
+			},
+			// effect: 'fade',
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// },
+			// Пагінація
+			pagination: {
+				el: '.sizes__pagination',
+				clickable: true,
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.sizes-swiper-button-prev',
+				nextEl: '.sizes-swiper-button-next',
+			},
+			/*
+			// Брейкпоінти
+			breakpoints: {
+				640: {
+					// slidesPerView: 1,
+					// spaceBetween: 0,
+					// autoHeight: true,
+				},
+				768: {
+					// slidesPerView: 3,
+					
+				},
+				992: {},
+				1268: {
+					// slidesPerView: 4,
+					// spaceBetween: 30,
 				},
 			},
 			*/

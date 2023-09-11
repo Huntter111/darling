@@ -46,7 +46,7 @@
 	background: rgba(110, 156, 159, 0.5) url('@img/icons/arrow.svg') center no-repeat;
 	flex: 0 0 rem(67);
 	width: rem(67);
-	height: rem(67);
+	// height: rem(67);
 	border-top: rem(1) solid #509498;
 	border-left: rem(1) solid #509498;
 	border-bottom: rem(1) solid #509498;
@@ -54,7 +54,7 @@
 	@media (max-width: $mobile) {
 		flex: 0 0 rem(53);
 		width: rem(53);
-		height: rem(53);
+		// height: rem(53);
 	}
 	@media (any-hover: hover) {
 		&:hover {
