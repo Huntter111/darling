@@ -1,0 +1,115 @@
+.popup {
+	&__wrapper {
+	}
+
+	&__content {
+		background-color: #fff;
+		@media (min-width: $mobile) {
+			padding: rem(70);
+		}
+		border-radius: 0;
+		@media (max-width: $mobile) {
+			padding-top: rem(70);
+		}
+		min-height: rem(500);
+	}
+
+	&__close {
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__text {
+	}
+}
+.form-popup {
+	&__wrapper {
+	}
+
+	&__content {
+	}
+	&__label {
+		@include adaptiveValue('font-size', 25, 22);
+		font-weight: 500;
+		line-height: 1.4; /* 35px */
+		letter-spacing: 0.5px;
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+		}
+	}
+	&__close {
+	}
+
+	&__body {
+	}
+}
+.form-send {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(40);
+	&__row {
+		display: flex;
+		column-gap: rem(20);
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+			row-gap: rem(20);
+		}
+	}
+	&__line {
+		flex-grow: 1;
+	}
+	&__input {
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+	}
+
+	&__product {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: rem(20);
+		column-gap: rem(20);
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		column-gap: rem(20);
+		@include adaptiveValue('font-size', 20, 17);
+		@media (min-width: $mobileSmall) {
+			flex: 1 0 50%;
+		}
+		flex-wrap: wrap;
+	}
+	&__name {
+	}
+
+	&__size {
+	}
+
+	&__color {
+	}
+
+	&__price {
+		@include adaptiveValue('font-size', 25, 20);
+		font-weight: 500;
+	}
+	&__button {
+		justify-content: center;
+		// @media (max-width: $mobileSmall) {
+		// 	font-size: rem(20);
+		// }
+		font-size: rem(20);
+	}
+}
+.line-form {
+	&__label-name {
+	}
+
+	&__content-name {
+	}
+}

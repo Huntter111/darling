@@ -82,7 +82,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js';
 
 /*
 Модуль паралаксу мишею
@@ -97,15 +97,15 @@ import * as flsForms from './files/forms/forms.js';
 
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
-	autoHeight: false
+	autoHeight: false,
 });
-*/
+
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
 // flsForms.formQuantity();
@@ -126,7 +126,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://github.com/RobinHerbots/inputmask
 Сніппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import './files/forms/inputmask.js';
 
 /* Модуль роботи з повзунком */
 /*
@@ -214,7 +214,7 @@ flsScroll.headerScroll();
 Документація плагіна: https://www.lightgalleryjs.com/docs/
 Сніппет(HTML):
 */
-// import "./files/gallery.js";
+import './files/gallery.js';
 
 // ========================================================================================================================================================================================================================================================
 // Масонрі сітка ========================================================================================================================================================================================================================================================
