@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import {Navigation, Pagination, Autoplay, EffectFade, EffectCoverflow, Thumbs, Controller} from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, EffectFade, EffectCoverflow, Thumbs, Controller } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -228,7 +228,7 @@ function initSliders() {
 				},
 				991: {
 					slidesPerView: 6,
-					spaceBetween: 30,
+					spaceBetween: 20,
 				},
 			},
 
@@ -308,8 +308,9 @@ function initSliders() {
 			modules: [Pagination, Navigation, Autoplay, EffectCoverflow],
 			observer: true,
 			observeParents: true,
-			// slidesPerView: 3,
-			spaceBetween: 0,
+			direction: 'vertical',
+			slidesPerView: 1,
+			spaceBetween: 30,
 			autoHeight: true,
 			speed: 500,
 			//touchRatio: 0,
@@ -317,20 +318,19 @@ function initSliders() {
 			// loop: true,
 			//preloadImages: false,
 			// lazy: true,
-
-			initialSlide: 1,
+			// initialSlide: 3,
 			// Ефекти
-			effect: 'coverflow',
-			grabCursor: true,
-			centeredSlides: true,
-			slidesPerView: 1.25,
-			coverflowEffect: {
-				rotate: 50,
-				stretch: 0,
-				depth: 100,
-				modifier: 1,
-				slideShadows: true,
-			},
+			// effect: 'coverflow',
+			// grabCursor: true,
+			// centeredSlides: true,
+			// slidesPerView: 1.25,
+			// coverflowEffect: {
+			// 	rotate: 50,
+			// 	stretch: 0,
+			// 	depth: 100,
+			// 	modifier: 1,
+			// 	slideShadows: true,
+			// },
 			// effect: 'fade',
 			// autoplay: {
 			// 	delay: 2500,
@@ -378,16 +378,16 @@ function initSliders() {
 			on: {},
 		});
 		// Вибираємо всі label для кольорів
-		const colorLabels = document.querySelectorAll('.color-product__label');
-		// Додаємо обробник події для кожного label
-		colorLabels.forEach((label, index) => {
-			label.addEventListener('click', () => {
-				// Знаходимо слайд за відповідним індексом
-				const slide = document.querySelector(`.image-product__slide:nth-child(${index + 1})`);
-				// Прокручуємо слайдер до потрібного слайда
-				swiper.slideTo(index);
-			});
-		});
+		// const colorLabels = document.querySelectorAll('.color-product__label');
+		// // Додаємо обробник події для кожного label
+		// colorLabels.forEach((label, index) => {
+		// 	label.addEventListener('click', () => {
+		// 		// Знаходимо слайд за відповідним індексом
+		// 		const slide = document.querySelector(`.image-product__slide:nth-child(${index + 1})`);
+		// 		// Прокручуємо слайдер до потрібного слайда
+		// 		swiper.slideTo(index);
+		// 	});
+		// });
 	}
 }
 

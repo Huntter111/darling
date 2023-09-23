@@ -48,9 +48,10 @@
 .form-send {
 	display: flex;
 	flex-direction: column;
-	row-gap: rem(40);
+	row-gap: rem(50);
 	&__row {
 		display: flex;
+		-moz-column-gap: rem(20);
 		column-gap: rem(20);
 		@media (max-width: $mobileSmall) {
 			flex-direction: column;
@@ -61,24 +62,28 @@
 		flex-grow: 1;
 	}
 	&__input {
+		font-family: 'Montserrat';
+		font-weight: 400;
 		@media (max-width: $mobile) {
 			font-size: rem(20);
 		}
 	}
 
 	&__product {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: rem(20);
-		column-gap: rem(20);
-		@media (max-width: $mobileSmall) {
-			grid-template-columns: 1fr;
-		}
+		// display: grid;
+		// grid-template-columns: repeat(2, 1fr);
+		// row-gap: rem(20);
+		// column-gap: rem(20);
+		// @media (max-width: $mobileSmall) {
+		// 	grid-template-columns: 1fr;
+		// }
 	}
 	&__wrapper {
 		display: flex;
 		align-items: center;
+		-moz-column-gap: rem(20);
 		column-gap: rem(20);
+		row-gap: rem(10);
 		@include adaptiveValue('font-size', 20, 17);
 		@media (min-width: $mobileSmall) {
 			flex: 1 0 50%;
@@ -89,20 +94,19 @@
 	}
 
 	&__size {
+		font-family: 'Montserrat';
+		@include adaptiveValue('font-size', 25, 20);
+		font-weight: 500;
 	}
 
 	&__color {
 	}
 
 	&__price {
-		@include adaptiveValue('font-size', 25, 20);
-		font-weight: 500;
 	}
 	&__button {
 		justify-content: center;
-		// @media (max-width: $mobileSmall) {
-		// 	font-size: rem(20);
-		// }
+
 		font-size: rem(20);
 	}
 }

@@ -43,6 +43,7 @@
 	letter-spacing: 0.4px;
 }
 .text {
+	font-family: 'Montserrat', sans-serif;
 	@include adaptiveValue('font-size', 17, 16);
 	font-weight: 500;
 	line-height: 1.4;
@@ -52,10 +53,10 @@
 	._active-color {
 		font-size: rem(17);
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 1.4;
 		letter-spacing: 0.3px;
-		color: #6e9c9f;
+		color: #007279;
 	}
 }
 .swiper-buttons-wrapper {
@@ -66,12 +67,13 @@
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			font-size: rem(16);
-			background-color: #509498;
-			width: rem(40);
-			height: rem(40);
+			font-size: rem(18);
+			// background-color: #509498;
+			background-color: #007279;
+			width: rem(45);
+			height: rem(45);
 			border-radius: 50%;
-			flex: 0 0 rem(40);
+			flex: 0 0 rem(45);
 		}
 	}
 }
@@ -150,6 +152,6 @@
 	top: 10%;
 	right: 5%;
 	@media (max-width: $mobile) {
-		top: 5%;
+		top: 3%;
 	}
 }

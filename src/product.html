@@ -3,11 +3,10 @@
 	@@include('html/_head.htm',{ "title":"Пончик круглий" })
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			@@include('html/_header-product.htm',{})
 			<main class="product">
 				<section class="product__main main-product">
 					<div class="main-product__container">
-						<h1 class="main-product__title sub-title">Пончик</h1>
 						<div class="main-product__body body-product">
 							<div class="body-product__images">
 								<div class="image-product">
@@ -17,46 +16,73 @@
 										<div data-gallery class="image-product__wrapper swiper-wrapper">
 											<!-- Слайд -->
 											<a
-												href="@img/product-one/main-slider/full/01.jpg"
+												href="@img/products/donuts/donut_cream/full-slider/full-image/01.jpg"
 												class="image-product__slide swiper-slide swiper-slide--gray"
 											>
-												<img src="@img/product-one/main-slider/preview/01.jpg" alt="Пончик Сірий" />
+												<img
+													src="@img/products/donuts/donut_cream/full-slider/preview-image/01.jpg"
+													alt="Пончик Сірий"
+												/>
 											</a>
 											<a
-												href="@img/product-one/main-slider/full/02.jpg"
+												href="@img/products/donuts/donut_cream/full-slider/full-image/02.jpg"
 												class="image-product__slide swiper-slide swiper-slide--rufous"
 											>
-												<img src="@img/product-one/main-slider/preview/02.jpg" alt="Пончик Рижий" />
+												<img
+													src="@img/products/donuts/donut_cream/full-slider/preview-image/02.jpg"
+													alt="Пончик Рижий"
+												/>
 											</a>
+
 											<a
-												href="@img/product-one/main-slider/full/03.jpg"
+												href="@img/products/donuts/donut_cream/full-slider/full-image/03.jpg"
 												class="image-product__slide swiper-slide swiper-slide--vanila"
 											>
-												<img src="@img/product-one/main-slider/preview/03.jpg" alt="Пончик Ваніль" />
+												<img
+													src="@img/products/donuts/donut_cream/full-slider/preview-image/03.jpg"
+													alt="Пончик Ваніль"
+												/>
 											</a>
 											<a
-												href="@img/product-one/main-slider/full/04.jpg"
+												href="@img/products/donuts/donut_cream/full-slider/full-image/04.jpg"
 												class="image-product__slide swiper-slide swiper-slide--beige"
 											>
-												<img src="@img/product-one/main-slider/preview/04.jpg" alt="Пончик бежевий" />
+												<img
+													src="@img/products/donuts/donut_cream/full-slider/preview-image/04.jpg"
+													alt="Пончик бежевий"
+												/>
 											</a>
 											<a
-												href="@img/product-one/main-slider/full/05.jpg"
+												href="@img/products/donuts/donut_cream/full-slider/full-image/05.jpg"
 												class="image-product__slide swiper-slide swiper-slide--mocha"
 											>
-												<img src="@img/product-one/main-slider/preview/05.jpg" alt="Пончик Мокко" />
+												<img
+													src="@img/products/donuts/donut_cream/full-slider/preview-image/05.jpg"
+													alt="Пончик Мокко"
+												/>
 											</a>
 											<a
-												href="@img/product-one/main-slider/full/06.jpg"
+												href="@img/products/donuts/donut_cream/full-slider/full-image/06.jpg"
 												class="image-product__slide swiper-slide swiper-slide--pink"
 											>
-												<img src="@img/product-one/main-slider/preview/06.jpg" alt="Пончик рожевий" />
+												<img
+													src="@img/products/donuts/donut_cream/full-slider/preview-image/06.jpg"
+													alt="Пончик рожевий"
+												/>
 											</a>
 										</div>
 										<div class="image-product__buttons swiper-buttons-wrapper">
 											<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
-											<button type="button" class="image-product__button-prev swiper-button-prev"></button>
-											<button type="button" class="image-product__button-next swiper-button-next"></button>
+											<button
+												type="button"
+												class="image-product__button-prev swiper-button-prev"
+												aria-label="button in slider prev"
+											></button>
+											<button
+												type="button"
+												class="image-product__button-next swiper-button-next"
+												aria-label="button in slider next"
+											></button>
 										</div>
 									</div>
 								</div>
@@ -64,22 +90,40 @@
 									<div class="image-preview__slider swiper">
 										<div class="image-preview__wrapper swiper-wrapper">
 											<div class="image-preview__slide swiper-slide">
-												<img src="@img/product-one/preview-slider/01.png" alt="Пончик Сірий" />
+												<img
+													src="@img/products/donuts/donut_cream/preview-slider/01.png"
+													alt="Пончик Сірий"
+												/>
 											</div>
 											<div class="image-preview__slide swiper-slide">
-												<img src="@img/product-one/preview-slider/02.png" alt="Пончик Рижий" />
+												<img
+													src="@img/products/donuts/donut_cream/preview-slider/02.png"
+													alt="Пончик Рижий"
+												/>
 											</div>
 											<div class="image-preview__slide swiper-slide">
-												<img src="@img/product-one/preview-slider/03.png" alt="Пончик Ваніль" />
+												<img
+													src="@img/products/donuts/donut_cream/preview-slider/03.png"
+													alt="Пончик Ваніль"
+												/>
 											</div>
 											<div class="image-preview__slide swiper-slide">
-												<img src="@img/product-one/preview-slider/04.png" alt="Пончик бежевий" />
+												<img
+													src="@img/products/donuts/donut_cream/preview-slider/04.png"
+													alt="Пончик бежевий"
+												/>
 											</div>
 											<div class="image-preview__slide swiper-slide">
-												<img src="@img/product-one/preview-slider/05.png" alt="Пончик Мокко" />
+												<img
+													src="@img/products/donuts/donut_cream/preview-slider/05.png"
+													alt="Пончик Мокко"
+												/>
 											</div>
 											<div class="image-preview__slide swiper-slide">
-												<img src="@img/product-one/preview-slider/06.png" alt="Пончик рожевий" />
+												<img
+													src="@img/products/donuts/donut_cream/preview-slider/06.png"
+													alt="Пончик рожевий"
+												/>
 											</div>
 										</div>
 									</div>
@@ -87,75 +131,231 @@
 							</div>
 							<div class="body-product__form">
 								<form class="form-product">
-									<div class="form-product__price price-product">
+									<h1 class="form-product__title sub-title">Пончик<span> кремовий</span></h1>
+									<div class="form-product__select select-form">
+										<div class="select-form__title heading-4">Виберіть розмір:</div>
+										<input type="hidden" name="typeProduct" value="пончик" />
+										<input type="hidden" name="color" value="крем" />
+										<!-- <select name="form[]" data-class-modif="form" class="text">
+											<option value="1" selected>
+												<span class="form__size">М (65х65 см)</span> -
+												<span class="form__price">700</span> грн.
+											</option>
+											<option value="2">
+												<span class="form__size">L (85х85 см)</span> -
+												<span class="form__price">2590</span> грн.
+											</option>
+											<option value="3">
+												<span class="form__size">XL (100х100 см)</span> -
+												<span class="form__price">3890</span> грн.
+											</option>
+										</select> -->
+										<select name="form[]" data-class-modif="form" class="text">
+											<!-- <option value="" selected>Виберіть розмір:</option> -->
+											<option value="1">S (D-45) - 550 грн</option>
+											<option value="2">M (D-55) - 650 грн</option>
+											<option value="3">L (D-65) - 720 грн</option>
+											<option value="4">XL (D-75) - 840 грн</option>
+										</select>
+										<a href="#" data-popup="#sizes" class="form-product__link">Переглянути розміри</a>
+									</div>
+									<!-- <div class="form-product__price price-product">
 										<div class="price-product__old">$450</div>
 										<div class="price-product__value">$311</div>
-									</div>
-									<div class="form-product__size size-product">
+									</div> -->
+									<!-- <div class="form-product__size size-product">
 										<h3 class="size-product__title heading-4">Виберіть розмір</h3>
 										<div class="size-product__options">
 											<div class="size-product__option">
-												<input id="o-1" type="radio" name="size" class="size-product__input" name="size" value="S" />
+												<input
+													id="o-1"
+													type="radio"
+													name="size"
+													class="size-product__input"
+													name="size"
+													value="S"
+												/>
 												<label for="o-1" class="size-product__label">S</label>
 											</div>
 											<div class="size-product__option">
-												<input id="o-2" type="radio" name="size" class="size-product__input" name="size" value="M" />
+												<input
+													id="o-2"
+													type="radio"
+													name="size"
+													class="size-product__input"
+													name="size"
+													value="M"
+												/>
 												<label for="o-2" class="size-product__label">M</label>
 											</div>
 											<div class="size-product__option">
-												<input id="o-3" type="radio" name="size" class="size-product__input" name="size" value="L" />
+												<input
+													id="o-3"
+													type="radio"
+													name="size"
+													class="size-product__input"
+													name="size"
+													value="L"
+												/>
 												<label for="o-3" class="size-product__label">L</label>
 											</div>
 										</div>
 										<div class="size-product__error">Виберіть розмір</div>
 										<a data-popup="#sizes" href="#" class="size-product__link">Переглянути розміри</a>
-									</div>
-									<div class="form-product__colors color-product">
+									</div> -->
+									<!-- <div class="form-product__colors color-product">
 										<h3 class="color-product__title heading-4">Виберіть колір</h3>
 										<div class="color-product__options">
 											<div class="color-product__option">
-												<input id="a-1" type="radio" name="color" class="color-product__input" value="Сірий" />
+												<input
+													id="a-1"
+													type="radio"
+													name="color"
+													class="color-product__input"
+													value="Сірий"
+												/>
 												<label for="a-1" class="color-product__label color-product__label--gray"></label>
 											</div>
 											<div class="color-product__option">
-												<input id="a-2" type="radio" name="color" class="color-product__input" value="Красновато-коричневий" />
+												<input
+													id="a-2"
+													type="radio"
+													name="color"
+													class="color-product__input"
+													value="Красновато-коричневий"
+												/>
 												<label for="a-2" class="color-product__label color-product__label--rufous"></label>
 											</div>
 											<div class="color-product__option">
-												<input id="a-3" type="radio" name="color" class="color-product__input" value="Ванільний" />
+												<input
+													id="a-3"
+													type="radio"
+													name="color"
+													class="color-product__input"
+													value="Ванільний"
+												/>
 												<label for="a-3" class="color-product__label color-product__label--vanila"></label>
 											</div>
 											<div class="color-product__option">
-												<input id="a-4" type="radio" name="color" class="color-product__input" value="Бежевий" />
+												<input
+													id="a-4"
+													type="radio"
+													name="color"
+													class="color-product__input"
+													value="Бежевий"
+												/>
 												<label for="a-4" class="color-product__label color-product__label--beige"></label>
 											</div>
 											<div class="color-product__option">
-												<input id="a-5" type="radio" name="color" class="color-product__input" value="Мокко" />
+												<input
+													id="a-5"
+													type="radio"
+													name="color"
+													class="color-product__input"
+													value="Мокко"
+												/>
 												<label for="a-5" class="color-product__label color-product__label--mocha"></label>
 											</div>
 											<div class="color-product__option">
-												<input id="a-6" type="radio" name="color" class="color-product__input" value="Розовий" />
+												<input
+													id="a-6"
+													type="radio"
+													name="color"
+													class="color-product__input"
+													value="Розовий"
+												/>
 												<label for="a-6" class="color-product__label color-product__label--pink"></label>
 											</div>
 										</div>
 										<div class="color-product__error">Виберіть колір</div>
-									</div>
-									<a data-popup="#message-good" type="button" class="form-product__button button">Оформити замовлення</a>
+									</div> -->
+									<a href="#" data-popup="#message-good" type="button" class="form-product__button button"
+										>Оформити замовлення</a
+									>
 									<!-- <div id="form-send-product" class="form-send__product"></div> -->
 								</form>
 							</div>
 						</div>
-						<div class="main-product__description description-product">
-							<h2 class="description-product__title sub-title">Опис товару</h2>
+						<div class="main-product__description desc-product">
+							<!-- <h2 class="desc-product__title sub-title">Опис товару</h2> -->
+							<div data-tabs data-tabs-animate="300" class="tabs desc-product-tabs">
+								<nav data-tabs-titles class="tabs__navigation desc-product-tabs__navigation">
+									<button type="button" class="tabs__title desc-product-tabs__title _tab-active">
+										Опис товару
+									</button>
+									<button type="button" class="tabs__title desc-product-tabs__title">Відео</button>
+								</nav>
+								<div data-tabs-body class="tabs__content desc-product-tabs__content text">
+									<div class="tabs__body desc-product-tabs__body body-tabs">
+										<div class="body-tabs__wrapper">
+											<div class="body-tabs__desc">
+												<p>
+													<span>Тканина:</span> Штучне хутро — це текстильний матеріал, відомий своєю
+													м'якістю та теплотою, завдяки довгому ворсу (22 мм).
+												</p>
+												<p>
+													Використовується для виготовлення м'яких іграшок, чим підтверджує свою
+													безпечність.
+												</p>
+											</div>
+											<div class="body-tabs__desc">
+												<span>Наповнювач:</span> Холлофайбер — це безпечний, антибактеріальний і
+												гіпоалергенний матеріал, який легко відновлює свою форму.
+											</div>
+										</div>
+									</div>
+									<div class="tabs__body desc-product-tabs__body body-tabs">
+										<div class="body-tabs__item">
+											<div class="body-tabs__video">
+												<video
+													controls
+													preload="metadata"
+													poster="https://warzone.org.ua/dist/videos/dounts/donut_cream/preview.png"
+												>
+													<source
+														src="https://warzone.org.ua/dist/videos/dounts/donut_cream/1.mp4"
+														type="video/mp4"
+													/>
+												</video>
+											</div>
+											<div class="body-tabs__video">
+												<video
+													controls
+													preload="metadata"
+													poster="https://warzone.org.ua/dist/videos/dounts/donut_cream/preview.png"
+												>
+													<source
+														src="https://warzone.org.ua/dist/videos/dounts/donut_cream/1.mp4"
+														type="video/mp4"
+													/>
+												</video>
+											</div>
+											<div class="body-tabs__video">
+												<video
+													controls
+													preload="metadata"
+													poster="https://warzone.org.ua/dist/videos/dounts/donut_cream/preview.png"
+												>
+													<source
+														src="https://warzone.org.ua/dist/videos/dounts/donut_cream/1.mp4"
+														type="video/mp4"
+													/>
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<a data-popup="#message" href="#"></a>
 					<a data-popup="#message-error" href="#"></a>
 				</section>
 			</main>
-			@@include('html/_footer.htm',{})
+			@@include('html/_footer-product.htm',{})
 		</div>
-		@@include('html/_js.htm',{}) @@include('html/_product-sizes.htm',{}) @@include('html/_message-to-telegram.htm',{})
-		@@include('html/_message.htm',{}) @@include('html/_message-error.htm',{})
+		@@include('html/_js.htm',{}) @@include('html/_product-sizes-dount.htm',{})
+		@@include('html/_message-to-telegram.htm',{}) @@include('html/_message.htm',{})
+		@@include('html/_message-error.htm',{})
 	</body>
 </html>

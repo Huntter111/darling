@@ -30,6 +30,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		-moz-column-gap: rem(40);
 		column-gap: rem(40);
 	}
 	&__logo {
@@ -98,12 +99,30 @@
 		}
 	}
 	&__item {
+		text-align: center;
 	}
 	&__link {
+		display: inline-block;
+		// padding-bottom: rem(2);
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			height: rem(1);
+			background-color: #00868e;
+			bottom: 0;
+			left: 50%;
+			width: rem(0);
+			transition: all 0.2s ease 0s;
+		}
 		@media (any-hover: hover) {
 			transition: all 0.1s;
 			&:hover {
-				color: #6e9c9f;
+				&::after {
+					left: 0;
+					width: 100%;
+				}
+				color: #00868e;
 			}
 		}
 	}
@@ -113,21 +132,24 @@
 .action-header {
 	display: flex;
 	align-items: center;
+	-moz-column-gap: rem(40);
 	column-gap: rem(40);
 	&__phone {
+		font-family: 'Montserrat';
 		position: relative;
 		z-index: 5;
 		display: flex;
 		align-items: center;
+		-moz-column-gap: rem(13);
 		column-gap: rem(13);
 		font-size: rem(15);
 		font-weight: 400;
 		line-height: 1.4;
 		letter-spacing: 0.3px;
-
 		img {
 			width: rem(20);
 			height: rem(20);
+			-webkit-animation: phoneVibration 1s infinite;
 			animation: phoneVibration 1s infinite;
 		}
 		@media (max-width: $mobile) {
@@ -149,6 +171,35 @@
 		}
 	}
 	&__icon {
+	}
+}
+@-webkit-keyframes phoneVibration {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-3deg);
+	}
+	20% {
+		transform: rotate(3deg);
+	}
+	30% {
+		transform: rotate(-2deg);
+	}
+	40% {
+		transform: rotate(2deg);
+	}
+	50% {
+		transform: rotate(-1deg);
+	}
+	60% {
+		transform: rotate(1deg);
+	}
+	70% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
 	}
 }
 @keyframes phoneVibration {

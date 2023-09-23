@@ -5,7 +5,7 @@
 	display: inline-flex;
 	padding: rem(22) rem(50);
 	align-items: center;
-	background: #6e9c9f;
+	background: #00868e;
 	color: #fff;
 	text-align: center;
 	font-size: rem(17);
@@ -23,11 +23,13 @@
 		}
 	}
 	@media (hover: none) {
-		background: #509498;
+		// background: #509498;
+		background: #00868e;
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			background: #509498;
+			// background: #509498;
+			background: #007279;
 			cursor: pointer;
 		}
 	}
@@ -43,13 +45,13 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(110, 156, 159, 0.5) url('@img/icons/arrow.svg') center no-repeat;
+	background: #00878e78 url('@img/icons/arrow.svg') center no-repeat;
 	flex: 0 0 rem(67);
 	width: rem(67);
 	// height: rem(67);
-	border-top: rem(1) solid #509498;
-	border-left: rem(1) solid #509498;
-	border-bottom: rem(1) solid #509498;
+	border-top: rem(1) solid #00868e;
+	border-left: rem(1) solid #00868e;
+	border-bottom: rem(1) solid #00868e;
 	transition: all 0.3s;
 	@media (max-width: $mobile) {
 		flex: 0 0 rem(53);
@@ -58,7 +60,7 @@
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			background: #509498 url('@img/icons/arrow.svg') center no-repeat;
+			background: #007279 url('@img/icons/arrow.svg') center no-repeat;
 		}
 	}
 }

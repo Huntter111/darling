@@ -7,7 +7,6 @@
 			<div class="popup__text form-popup__body">
 				<div class="form-popup__label">Оформлення замовлення</div>
 				<form action="files/sendtelegram.php" class="form-send" method="post">
-					<input type="hidden" name="typeProduct" value="1" />
 					<div class="form-send__row">
 						<div class="form-send__line line-form">
 							<input
@@ -42,18 +41,10 @@
 					<div class="form-send__product">
 						<div class="form-send__wrapper">
 							<div class="form-send__name">Обраний розмір:</div>
-							<div class="form-send__size"></div>
-						</div>
-						<div class="form-send__wrapper">
-							<div class="form-send__name">Обраний колір:</div>
-							<div class="form-send__color"></div>
-						</div>
-						<div class="form-send__wrapper">
-							<div class="form-send__name">Ціна:</div>
-							<div class="form-send__price"></div>
+							<div id="size" class="form-send__size"></div>
 						</div>
 					</div>
-					<button type="submit" class="button form-send__button">Надіслати</button>
+					<button type="submit" class="button form-send__button">Замовити</button>
 				</form>
 			</div>
 		</div>

@@ -88,7 +88,7 @@
 		@media (any-hover: hover) {
 			transition: all 0.1s;
 			&:hover {
-				color: #6e9c9f;
+				color: #007279;
 			}
 		}
 		@media (min-width: $mobile) {
@@ -108,6 +108,7 @@
 	line-height: 1.4; /* 21px */
 	letter-spacing: 0.3px;
 	&__phone {
+		font-family: 'Montserrat';
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
@@ -127,8 +128,10 @@
 
 	&__media {
 		display: flex;
+		-moz-column-gap: rem(12);
 		column-gap: rem(12);
 		@media (max-width: $mobile) {
+			-moz-column-gap: rem(20);
 			column-gap: rem(20);
 		}
 		a {
