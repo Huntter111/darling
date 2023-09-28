@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Лежанка пончик" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-product.htm',{})
+			<main class="product">
+				<section class="product__main main-product">
+					<div class="main-product__container">
+						<div class="main-product__body body-product">
+							<div class="body-product__images">
+								<div class="image-product">
+									<!-- Оболонка слайдера -->
+									<div class="image-product__slider swiper">
+										<!-- Частина слайдера, що рухається -->
+										<div data-gallery class="image-product__wrapper swiper-wrapper">
+											<!-- Слайд -->
+											<a
+												href="@img/products/donuts/donut_pink/full-slider/full-image/01.jpg"
+												class="image-product__slide swiper-slide swiper-slide--gray"
+											>
+												<img
+													src="@img/products/donuts/donut_pink/full-slider/preview-image/01.jpg"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</a>
+											<a
+												href="@img/products/donuts/donut_pink/full-slider/full-image/02.jpg"
+												class="image-product__slide swiper-slide swiper-slide--rufous"
+											>
+												<img
+													src="@img/products/donuts/donut_pink/full-slider/preview-image/02.jpg"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</a>
+											<a
+												href="@img/products/donuts/donut_pink/full-slider/full-image/03.jpg"
+												class="image-product__slide swiper-slide swiper-slide--vanila"
+											>
+												<img
+													src="@img/products/donuts/donut_pink/full-slider/preview-image/03.jpg"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</a>
+											<a
+												href="@img/products/donuts/donut_pink/full-slider/full-image/04.jpg"
+												class="image-product__slide swiper-slide swiper-slide--beige"
+											>
+												<img
+													src="@img/products/donuts/donut_pink/full-slider/preview-image/04.jpg"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</a>
+										</div>
+										<div class="image-product__buttons swiper-buttons-wrapper">
+											<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+											<button
+												type="button"
+												class="image-product__button-prev swiper-button-prev"
+												aria-label="button in slider prev"
+											></button>
+											<button
+												type="button"
+												class="image-product__button-next swiper-button-next"
+												aria-label="button in slider next"
+											></button>
+										</div>
+									</div>
+								</div>
+								<div class="image-preview">
+									<div class="image-preview__slider swiper">
+										<div class="image-preview__wrapper swiper-wrapper">
+											<div class="image-preview__slide swiper-slide">
+												<img
+													src="@img/products/donuts/donut_pink/preview-slider/01.png"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</div>
+											<div class="image-preview__slide swiper-slide">
+												<img
+													src="@img/products/donuts/donut_pink/preview-slider/02.png"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</div>
+											<div class="image-preview__slide swiper-slide">
+												<img
+													src="@img/products/donuts/donut_pink/preview-slider/03.png"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</div>
+											<div class="image-preview__slide swiper-slide">
+												<img
+													src="@img/products/donuts/donut_pink/preview-slider/04.png"
+													alt="Лежак для тварин - пончик рожевий"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="body-product__form">
+								<form class="form-product">
+									<h1 class="form-product__title sub-title">Пончик <span>рожевий</span></h1>
+									<div class="form-product__select select-form">
+										<div class="select-form__title heading-4">Виберіть розмір:</div>
+										<input type="hidden" name="typeProduct" value="Пончик" />
+										<input type="hidden" name="color" value="Рожевий" />
+										<input type="hidden" name="namePage" value="" />
+										<select name="form[]" data-class-modif="form" class="text">
+											<!-- <option value="" selected>Виберіть розмір:</option> -->
+											<option value="1">S (D-45) - 550 грн</option>
+											<option value="2">M (D-55) - 650 грн</option>
+											<option value="3">L (D-65) - 720 грн</option>
+											<option value="4">XL (D-75) - 840 грн</option>
+										</select>
+										<a data-popup="#sizes" href="#" class="form-product__link">Переглянути розміри</a>
+									</div>
+									<a href="#" data-popup="#message-good" type="button" class="form-product__button button"
+										>Оформити замовлення</a
+									>
+								</form>
+							</div>
+						</div>
+						<div class="main-product__description desc-product">
+							<!-- <h2 class="desc-product__title sub-title">Опис товару</h2> -->
+							<div data-tabs data-tabs-animate="500" class="tabs desc-product-tabs">
+								<nav data-tabs-titles class="tabs__navigation desc-product-tabs__navigation">
+									<button type="button" class="tabs__title desc-product-tabs__title _tab-active">
+										Опис товару
+									</button>
+									<button type="button" class="tabs__title desc-product-tabs__title">Відео</button>
+								</nav>
+								<div data-tabs-body class="tabs__content desc-product-tabs__content text">
+									<div class="tabs__body desc-product-tabs__body body-tabs">
+										<div class="body-tabs__wrapper">
+											<div class="body-tabs__desc">
+												<p>
+													<span>Тканина:</span> Штучне хутро — це текстильний матеріал, відомий своєю
+													м'якістю та теплотою, завдяки довгому ворсу (22 мм).
+												</p>
+												<p>
+													Використовується для виготовлення м'яких іграшок, чим підтверджує свою
+													безпечність.
+												</p>
+											</div>
+											<div class="body-tabs__desc">
+												<span>Наповнювач:</span> Холлофайбер — це безпечний, антибактеріальний і
+												гіпоалергенний матеріал, який легко відновлює свою форму.
+											</div>
+										</div>
+									</div>
+									<div class="tabs__body desc-product-tabs__body body-tabs">
+										<div class="body-tabs__item">
+											<div class="body-tabs__video">
+												<video
+													controls
+													preload="metadata"
+													poster="https://warzone.org.ua/dist/videos/dounts/donut_terracotta/preview-1.png"
+												>
+													<source
+														src="https://warzone.org.ua/dist/videos/dounts/donut_terracotta/01.mp4"
+														type="video/mp4"
+													/>
+												</video>
+											</div>
+											<div class="body-tabs__video">
+												<video
+													controls
+													preload="metadata"
+													poster="https://warzone.org.ua/dist/videos/dounts/donut_terracotta/preview-2.png"
+												>
+													<source
+														src="https://warzone.org.ua/dist/videos/dounts/donut_terracotta/02.mp4"
+														type="video/mp4"
+													/>
+												</video>
+											</div>
+											<div class="body-tabs__video">
+												<video
+													controls
+													preload="metadata"
+													poster="https://warzone.org.ua/dist/videos/dounts/donut_terracotta/preview-3.png"
+												>
+													<source
+														src="https://warzone.org.ua/dist/videos/dounts/donut_terracotta/03.mp4"
+														type="video/mp4"
+													/>
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a data-popup="#message" href="#"></a>
+					<a data-popup="#message-error" href="#"></a>
+				</section>
+			</main>
+			@@include('html/_footer-product.htm',{})
+		</div>
+		@@include('html/_js.htm',{}) @@include('html/_product-sizes-dount.htm',{})
+		@@include('html/_message-to-telegram.htm',{}) @@include('html/_message.htm',{})
+		@@include('html/_message-error.htm',{})
+	</body>
+</html>

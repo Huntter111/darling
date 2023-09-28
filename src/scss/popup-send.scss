@@ -5,11 +5,11 @@
 	&__content {
 		background-color: #fff;
 		@media (min-width: $mobile) {
-			padding: rem(70);
+			padding: rem(20);
 		}
 		border-radius: 0;
 		@media (max-width: $mobile) {
-			padding-top: rem(70);
+			padding-top: rem(20);
 		}
 		min-height: rem(500);
 	}
@@ -28,6 +28,7 @@
 	}
 
 	&__content {
+		padding: rem(70);
 	}
 	&__label {
 		@include adaptiveValue('font-size', 25, 22);

@@ -106,6 +106,20 @@ if (document.title === 'Головна сторінка') {
 
 const selectElement = document.querySelector('select[data-class-modif="form"]');
 if (selectElement) {
+	// Отримуємо поточну URL сторінки
+	var currentUrl = window.location.href;
+
+	// Отримуємо частину URL, що містить назву сторінки
+	var pageName = currentUrl.substr(currentUrl.lastIndexOf('/') + 1);
+
+	// Знаходимо елемент <input> з name="namePage" та змінюємо його значення
+	var namePageInput = document.querySelector('input[name="namePage"]');
+	if (namePageInput) {
+		namePageInput.value = pageName;
+	} else {
+		console.error('Елемент з name="namePage" не знайдено на сторінці.');
+	}
+	// !
 	let prevCopiedSizeOption = null;
 
 	// Function to copy selected size option

@@ -7,12 +7,12 @@
 		// min-height: rem(350);
 		@media (max-width: $tablet) {
 			padding: rem(20);
-			padding-top: rem(40);
+			padding-top: rem(20);
 		}
 	}
 	&__images {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		-moz-column-gap: rem(20);
 		column-gap: rem(20);
 		@media (max-width: $tablet) {
@@ -34,7 +34,7 @@
 	&__title {
 		text-align: center;
 		&:not(:last-child) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(30);
 		}
 	}
 	&__sub-title {

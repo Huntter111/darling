@@ -121,7 +121,7 @@ function initSliders() {
 			lazy: true,
 
 			// Ефекти
-			// effect: 'fade',
+
 			// autoplay: {
 			// 	delay: 2500,
 			// 	disableOnInteraction: false,
