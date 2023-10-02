@@ -11,9 +11,17 @@
 		@media (max-width: $mobile) {
 			padding-top: rem(20);
 		}
-		min-height: rem(500);
-		@media (max-width: $tablet) {
-			min-height: rem(400);
+		&--send {
+			min-height: rem(500);
+			@media (max-width: $tablet) {
+				min-height: rem(400);
+			}
+		}
+		&--error {
+			min-height: rem(500);
+			@media (max-width: $tablet) {
+				min-height: rem(400);
+			}
 		}
 	}
 
