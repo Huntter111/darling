@@ -179,6 +179,13 @@ if (selectElement) {
 				// Додаємо клонований інпут до форми .form-send
 				formSend.appendChild(clonedInput);
 			});
+			// Отримуємо поточний URL сторінки і записуємо його в поле з ім'ям "linkPage"
+			let currentUrl = window.location.href;
+			let linkPageInput = document.createElement('input');
+			linkPageInput.type = 'hidden';
+			linkPageInput.name = 'linkPage';
+			linkPageInput.value = currentUrl;
+			formSend.appendChild(linkPageInput);
 		}
 
 		// Викликаємо функцію для копіювання при завантаженні сторінки

@@ -12,6 +12,9 @@
 			padding-top: rem(20);
 		}
 		min-height: rem(500);
+		@media (max-width: $tablet) {
+			min-height: rem(400);
+		}
 	}
 
 	&__close {
@@ -28,7 +31,9 @@
 	}
 
 	&__content {
-		padding: rem(70);
+		@media (min-width: $mobile) {
+			padding: rem(70);
+		}
 	}
 	&__label {
 		@include adaptiveValue('font-size', 25, 22);
