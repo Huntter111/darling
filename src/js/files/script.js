@@ -190,6 +190,13 @@ if (selectElement) {
 
 		// Викликаємо функцію для копіювання при завантаженні сторінки
 		copyFormElements();
+		var reloadButton = document.getElementById('reloadButton');
+
+		// Додаємо обробник події "click" до кнопки
+		reloadButton.addEventListener('click', function () {
+			// Викликаємо функцію location.reload(), яка перезавантажує поточну сторінку
+			location.reload();
+		});
 	});
 }
 // getPriceValueProductOne();

@@ -197,7 +197,7 @@
 		}
 	}
 	&__title {
-		@include adaptiveValue('font-size', 20, 15, 0, 479, 400);
+		@include adaptiveValue('font-size', 20, 15, 1, 479, 375);
 		font-style: normal;
 		font-weight: 500;
 		line-height: 1.4; /* 28px */
@@ -213,6 +213,7 @@
 		@media (max-width: $mobileSmall) {
 			row-gap: rem(3);
 		}
+		background: rgba(249, 251, 253, 0.9);
 		padding-right: rem(10);
 		padding-left: rem(10);
 		@include adaptiveValue('padding-bottom', 30, 15, 0, 991, 768);
@@ -235,14 +236,14 @@
 	}
 
 	&__old-price {
-		@include adaptiveValue('font-size', 17, 14, 0, 479, 400);
+		@include adaptiveValue('font-size', 17, 14, 1, 479, 375);
 		color: #9c9c9c;
 		text-decoration: line-through;
 	}
 
 	&__value {
 		font-weight: 500;
-		@include adaptiveValue('font-size', 20, 16, 0, 479, 400);
+		@include adaptiveValue('font-size', 20, 16, 1, 479, 375);
 		color: #b49454;
 	}
 }

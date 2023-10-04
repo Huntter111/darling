@@ -1,7 +1,9 @@
 <div id="message" aria-hidden="true" class="popup message">
 	<div class="popup__wrapper message__wrapper">
-		<div class="popup__content message__content">
-			<button data-close type="button" class="popup__close close-popup-btn"><img src="@img/icons/close.svg" alt="Icon: close" /></button>
+		<div class="popup__content message__content popup__content--send">
+			<button id="reloadButton" type="button" class="popup__close close-popup-btn">
+				<img src="@img/icons/close.svg" alt="Icon: close" />
+			</button>
 			<div class="popup__text message__body">
 				<div class="message__wrapper">
 					<div class="message__icon">
@@ -14,7 +16,7 @@
 				</div>
 				<div class="message__buttons">
 					<a href="index.html" class="button message__button">Перейти на головну</a>
-					<button data-close href="#" class="button message__button">Замовити ще</button>
+					<button id="reloadButton" class="button message__button">Замовити ще</button>
 				</div>
 			</div>
 		</div>
