@@ -12,8 +12,9 @@
 	}
 }
 .pblock {
-	@include adaptiveValue('padding-top', 65, 35);
-	@include adaptiveValue('margin-bottom', 65, 35);
+	// @include adaptiveValue('padding-top', 45, 35);
+	padding-top: rem(20);
+	@include adaptiveValue('margin-bottom', 120, 35);
 	&:last-child {
 		@include adaptiveValue('margin-bottom', 130, 100);
 	}
