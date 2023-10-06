@@ -132,7 +132,7 @@
 		@media (min-width: em(375)) {
 			grid-template-columns: repeat(2, 1fr);
 		}
-		@media (max-width: em(375)) {
+		@media (max-width: em(374)) {
 			row-gap: rem(15);
 		}
 		@media (min-width: $mobile) {
@@ -197,7 +197,7 @@
 		}
 	}
 	&__title {
-		@include adaptiveValue('font-size', 20, 15, 1, 479, 375);
+		@include adaptiveValue('font-size', 20, 15, 2, 479, 375);
 		font-style: normal;
 		font-weight: 500;
 		line-height: 1.4; /* 28px */
@@ -218,6 +218,11 @@
 		padding-left: rem(10);
 		@include adaptiveValue('padding-bottom', 30, 15, 0, 991, 768);
 		@include adaptiveValue('padding-top', 30, 15, 0, 991, 768);
+		@media (max-width: em(374)) {
+			padding-top: rem(25);
+			padding-bottom: rem(25);
+			font-size: rem(20);
+		}
 	}
 	&__prices {
 		font-family: 'Montserrat';
@@ -236,14 +241,17 @@
 	}
 
 	&__old-price {
-		@include adaptiveValue('font-size', 17, 14, 1, 479, 375);
+		@include adaptiveValue('font-size', 15, 14, 0, 479, 375);
 		color: #9c9c9c;
 		text-decoration: line-through;
 	}
 
 	&__value {
 		font-weight: 500;
-		@include adaptiveValue('font-size', 20, 16, 1, 479, 375);
+		font-weight: 500;
+		line-height: 1.4;
+		letter-spacing: 0.3px;
+		@include adaptiveValue('font-size', 20, 17, 0, 479, 375);
 		color: #b49454;
 	}
 }
