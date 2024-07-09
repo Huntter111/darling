@@ -4,8 +4,8 @@
 // Сніппет (HTML): pl
 
 // Підключення функціоналу "Чортоги Фрілансера"
-import {isMobile, bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS} from '../files/functions.js';
-import {flsModules} from '../files/modules.js';
+import { isMobile, bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS } from '../files/functions.js';
+import { flsModules } from '../files/modules.js';
 
 // Клас Popup
 class Popup {
@@ -257,12 +257,32 @@ class Popup {
 					this._focusTrap();
 				}, 50);
 				// ! Проверка открыт ли попап
+				// const inputMask = document.getElementById('phoneInput');
+				// if (inputMask) {
+				// 	let im = new Inputmask('+38(099) 999-99-99', {showMaskOnHover: false});
+				// 	im.mask(inputMask);
+				// }
 				const inputMask = document.getElementById('phoneInput');
 				if (inputMask) {
-					let im = new Inputmask('+38(099) 999-99-99', {showMaskOnHover: false});
+					let im = new Inputmask('+38(099) 999-99-99', { showMaskOnHover: false });
 					im.mask(inputMask);
+					// Находим родительскую форму
+					const form = inputMask.closest('form');
+					if (form) {
+						// Прослушиваем событие отправки формы
+						form.addEventListener('submit', function (event) {
+							// Проверяем, полностью ли заполнен номер телефона
+							const maskedValue = inputMask.inputmask.unmaskedvalue();
+							if (maskedValue.length < 9) {
+								// 12 - длина строки включая код страны и символы форматирования
+								// Если номер телефона не полностью заполнен, отменяем отправку формы
+								event.preventDefault();
+								// alert('Пожалуйста, введите полный номер телефона.');
+							}
+							// Иначе форма будет отправлена нормально
+						});
+					}
 				}
-
 				document.body.focus();
 				// Після відкриття
 				this.options.on.afterOpen(this);
@@ -335,7 +355,9 @@ class Popup {
 	// Отримання хешу
 	_getHash() {
 		if (this.options.hashSettings.location) {
-			this.hash = this.targetOpen.selector.includes('#') ? this.targetOpen.selector : this.targetOpen.selector.replace('.', '#');
+			this.hash = this.targetOpen.selector.includes('#')
+				? this.targetOpen.selector
+				: this.targetOpen.selector.replace('.', '#');
 		}
 	}
 	_openToHash() {
@@ -349,7 +371,9 @@ class Popup {
 			? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`)
 			: document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace('.', '#')}"]`);
 
-		this.youTubeCode = buttons.getAttribute(this.options.youtubeAttribute) ? buttons.getAttribute(this.options.youtubeAttribute) : null;
+		this.youTubeCode = buttons.getAttribute(this.options.youtubeAttribute)
+			? buttons.getAttribute(this.options.youtubeAttribute)
+			: null;
 
 		if (buttons && classInHash) this.open(classInHash);
 	}

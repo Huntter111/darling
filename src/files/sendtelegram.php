@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Отримання даних з форми
+   // Отримання даних з форми
    $name = $_POST["name"];
    $phone = $_POST["phone"];
    $sizePrice = $_POST["size"];
@@ -10,8 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $namePage = $_POST['namePage'];
    $linkPage = $_POST['linkPage'];
    // Налаштування Telegram-бота
-   $botToken = "6326698251:AAG4khK9I-svNecAgxBSln9_g1UijVHI-6Y";
-   $chatId = "-977034876";
+   $botToken = "6676581966:AAFzygVUgqxYX6ipTiplo8KeC3YLJT40emw";
+   $chatId = "-4023788897";
 
    // Формування повідомлення
    $message = "<b>Нове замовлення</b>\n";
@@ -40,10 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
    
    if ($response) {
-      header("Location: https://warzone.org.ua/dist/$namePage#message");
+      header("Location: https://darlingstore.com.ua/$namePage#message");
       exit();
    } else {
-      header("Location: https://warzone.org.ua/dist/$namePage#message-error");
+      header("Location: https://darlingstore.com.ua/$namePage#message-error");
       exit();
    }
 }

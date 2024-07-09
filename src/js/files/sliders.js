@@ -183,10 +183,10 @@ function initSliders() {
 			// touchRatio: 0,
 			//simulateTouch: false,
 			//preloadImages: false,
-			slideToClickedSlide: true,
 			// lazy: true,
 			// loop: true,
 
+			slideToClickedSlide: true,
 			freeMode: true,
 			watchSlidesProgress: true,
 			// Ефекти

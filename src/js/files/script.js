@@ -190,15 +190,42 @@ if (selectElement) {
 
 		// Викликаємо функцію для копіювання при завантаженні сторінки
 		copyFormElements();
-		var reloadButton = document.getElementById('reloadButton');
+		// Знаходимо всі елементи з класом 'reloadButton'
+		const reloadButtons = document.querySelectorAll('.reloadButton');
 
-		// Додаємо обробник події "click" до кнопки
-		reloadButton.addEventListener('click', function () {
-			// Викликаємо функцію location.reload(), яка перезавантажує поточну сторінку
-			location.reload();
+		// Додаємо обробник події "click" до кожної кнопки з класом 'reloadButton'
+		reloadButtons.forEach((button) => {
+			button.addEventListener('click', function () {
+				// Викликаємо функцію location.reload(), яка перезавантажує поточну сторінку
+				location.reload();
+			});
 		});
 	});
+	document.addEventListener('selectCallback', function (e) {
+		// Селект
+		const currentSelect = e.detail;
+		console.log('🚀 ~ file: script.js:207 ~ currentSelect:', currentSelect);
+	});
+
+	// document.addEventListener('DOMContentLoaded', function (){
+	// 	var form = document.querySelector('.form-send');
+	// 	var phoneInput = document.getElementById('phoneInput');
+
+	// 	form.addEventListener('submit', function (event) {
+	// 		if (!validatePhone(phoneInput.value)) {
+	// 			event.preventDefault();
+	// 			// alert('Пожалуйста, введите корректный телефонный номер.');
+	// 		}
+	// 	});
+
+	// 	function validatePhone(phone) {
+	// 		// Пример простой валидации для украинского номера телефона
+	// 		var phoneRegex = /^\+38(0\d{9})$/;
+	// 		return phoneRegex.test(phone);
+	// 	}
+	// });
 }
+
 // getPriceValueProductOne();
 // Function to copy price
 // Function to copy size from .select__content to .form-send__size

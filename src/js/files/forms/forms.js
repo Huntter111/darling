@@ -1,10 +1,10 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 // Підключення списку активних модулів
-import {flsModules} from '../modules.js';
+import { flsModules } from '../modules.js';
 // Допоміжні функції
-import {isMobile, _slideUp, _slideDown, _slideToggle, FLS} from '../functions.js';
+import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from '../functions.js';
 // Модуль прокручування до блоку
-import {gotoBlock} from '../scroll/gotoblock.js';
+import { gotoBlock } from '../scroll/gotoblock.js';
 //================================================================================================================================================================================================================================================================================================================================
 
 /*
@@ -12,7 +12,7 @@ import {gotoBlock} from '../scroll/gotoblock.js';
 */
 
 // Робота із полями форми.
-export function formFieldsInit(options = {viewPass: false, autoHeight: false}) {
+export function formFieldsInit(options = { viewPass: false, autoHeight: false }) {
 	document.body.addEventListener('focusin', function (e) {
 		const targetElement = e.target;
 		if (targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA') {
@@ -54,7 +54,9 @@ export function formFieldsInit(options = {viewPass: false, autoHeight: false}) {
 				const startHeight = textarea.hasAttribute('data-autoheight-min')
 					? Number(textarea.dataset.autoheightMin)
 					: Number(textarea.offsetHeight);
-				const maxHeight = textarea.hasAttribute('data-autoheight-max') ? Number(textarea.dataset.autoheightMax) : Infinity;
+				const maxHeight = textarea.hasAttribute('data-autoheight-max')
+					? Number(textarea.dataset.autoheightMax)
+					: Infinity;
 				setHeight(textarea, Math.min(startHeight, maxHeight));
 				textarea.addEventListener('input', () => {
 					if (textarea.scrollHeight > startHeight) {
@@ -76,7 +78,10 @@ export let formValidate = {
 		let formRequiredItems = form.querySelectorAll('*[data-required]');
 		if (formRequiredItems.length) {
 			formRequiredItems.forEach((formRequiredItem) => {
-				if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === 'SELECT') && !formRequiredItem.disabled) {
+				if (
+					(formRequiredItem.offsetParent !== null || formRequiredItem.tagName === 'SELECT') &&
+					!formRequiredItem.disabled
+				) {
 					error += this.validateInput(formRequiredItem);
 				}
 			});
@@ -126,7 +131,10 @@ export let formValidate = {
 		let inputError = formRequiredItem.parentElement.querySelector('.form__error');
 		if (inputError) formRequiredItem.parentElement.removeChild(inputError);
 		if (formRequiredItem.dataset.error) {
-			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+			formRequiredItem.parentElement.insertAdjacentHTML(
+				'beforeend',
+				`<div class="form__error">${formRequiredItem.dataset.error}</div>`,
+			);
 		}
 	},
 	removeError(formRequiredItem) {
@@ -167,8 +175,14 @@ export let formValidate = {
 	emailTest(formRequiredItem) {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
 	},
+	// phoneTest(formRequiredItem) {
+	// 	return /^\+38\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$/.test(formRequiredItem.value);
+	// },
 	phoneTest(formRequiredItem) {
-		return /^\+38\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$/.test(formRequiredItem.value);
+		return (
+			/^\+38\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$/.test(formRequiredItem.value) &&
+			formRequiredItem.value.replace(/\D/g, '').length >= 9
+		);
 	},
 	nameTest(formRequiredItem) {
 		// Регулярний вираз для перевірки імені без спеціальних символів і не тільки з цифр

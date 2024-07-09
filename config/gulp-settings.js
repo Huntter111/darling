@@ -14,7 +14,7 @@ export const path = {
 		css: `${buildFolder}/css/`,
 		images: `${buildFolder}/img/`,
 		fonts: `${buildFolder}/fonts/`,
-		files: `${buildFolder}/files/`
+		files: `${buildFolder}/files/`,
 	},
 	src: {
 		html: `${srcFolder}/*.html`,
@@ -32,15 +32,15 @@ export const path = {
 	rootFolder: rootFolder,
 	srcFolder: srcFolder,
 	// Шлях до потрібної папки на віддаленому сервері.
-	ftp: ``
+	ftp: ``,
 	// Приклад: завантажити в папку 2022 далі в папку з назвою проєкту
 	// ftp: `2022/${rootFolder}`
 };
 
 // Налаштування FTP з'єднання
 export const configFTP = {
-	host: "", // Адреса FTP сервера
-	user: "", // Ім'я користувача
-	password: "", // Пароль
-	parallel: 5 // Кількість одночасних потоків
-}
+	host: 'fg516669.ftp.tools', // Адреса FTP сервера
+	user: 'fg516669_ftp', // Ім'я користувача
+	password: 'SHkR2b5K', // Пароль
+	parallel: 5, // Кількість одночасних потоків
+};
